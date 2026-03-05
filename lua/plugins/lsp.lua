@@ -1,15 +1,6 @@
 return {
   -- Gestor de servidores LSP
   {
-    "williamboman/mason.nvim",
-    config = true,
-  },
-  {
-    "williamboman/mason-lspconfig.nvim",
-    dependencies = { "williamboman/mason.nvim" },
-    config = true,
-  },
-  {
     "neovim/nvim-lspconfig",
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
