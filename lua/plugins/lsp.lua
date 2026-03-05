@@ -4,11 +4,11 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      vim.lsp.enable('rust-analyzer')
-      vim.lsp.enable('asm-lsp')
+      vim.lsp.enable('ts_ls')
       vim.lsp.enable('lua_ls')
       vim.lsp.enable('clangd')
-      vim.lsp.enable('pylsp')
+      vim.lsp.enable('pyright')
+      vim.lsp.enable('gopls')
 
     end,
   },
