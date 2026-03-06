@@ -7,3 +7,5 @@ vim.o.shiftwidth = 4
 vim.o.softtabstop = 4
 vim.o.expandtab = true
 
+-- share clipboard with system
+vim.o.clipboard = 'unnamedplus'
