@@ -1,3 +1,4 @@
+-- Displays file in tree view
 return {
 	{
 		"nvim-tree/nvim-tree.lua",
