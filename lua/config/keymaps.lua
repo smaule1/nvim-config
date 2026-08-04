@@ -22,3 +22,4 @@ vim.keymap.set("n", "<C-h>", "<C-w>h<CR>", { desc = "Buffer Previous" })
 
 --lsp
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "LSP Go to Definition" })
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })

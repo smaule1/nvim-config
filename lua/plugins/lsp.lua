@@ -1,5 +1,6 @@
 return {
 	--Activación y Configuración de LSP's
+	--
 	"neovim/nvim-lspconfig",
 	config = function()
 		vim.lsp.enable("ts_ls")
@@ -8,5 +9,6 @@ return {
 		vim.lsp.enable("pyright")
 		vim.lsp.enable("gopls")
 		vim.lsp.enable("docker_language_server")
+		vim.lsp.enable("tailwindcss")
 	end,
 }

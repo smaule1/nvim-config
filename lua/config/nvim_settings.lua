@@ -8,10 +8,10 @@ vim.o.softtabstop = 4
 vim.o.expandtab = true
 
 -- share clipboard with system
-vim.o.clipboard = 'unnamedplus'
+vim.o.clipboard = "unnamedplus"
 
 -- default colorscheme
-vim.cmd.colorscheme 'tokyonight-night'
+vim.cmd.colorscheme("tokyonight-night")
 
 -- true colors
 vim.opt.termguicolors = true
