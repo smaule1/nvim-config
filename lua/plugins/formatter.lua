@@ -12,6 +12,12 @@ return {
 			html = { "prettier" },
 			css = { "prettier" },
 			go = { "gofmt" },
+			python = { "ruff_organize_imports", "ruff_format" },
+		},
+		formatters = {
+			prettier = {
+				prepend_args = { "--single-quote", "--jsx-single-quote" },
+			},
 		},
 	},
 }
