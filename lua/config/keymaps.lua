@@ -13,6 +13,16 @@ vim.keymap.set("n", "<Tab>", "<cmd>bn<CR>", { desc = "Buffer Next" })
 vim.keymap.set("n", "<S-Tab>", "<cmd>bp<CR>", { desc = "Buffer Previous" })
 vim.keymap.set("n", "<A-l>", "<cmd>bn<CR>", { desc = "Buffer Next" })
 vim.keymap.set("n", "<A-h>", "<cmd>bp<CR>", { desc = "Buffer Previous" })
+-- Delete all open buffers
+vim.api.nvim_create_user_command('BufDeleteAll', function()
+  local buffers = vim.api.nvim_list_bufs()
+  for _, buf in ipairs(buffers) do
+    if vim.api.nvim_buf_is_loaded(buf) then
+      vim.api.nvim_buf_delete(buf, {})
+    end
+  end
+end, {})
+vim.keymap.set('n', '<leader>bda', ':BufDeleteAll<CR>', { desc = 'Delete all buffers', silent = true })
 
 -- writting
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Write file" })
@@ -32,3 +42,6 @@ vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" }
 vim.keymap.set({ "n", "v" }, "<leader>ft", function()
   require("conform").format({ async = true, lsp_fallback = true })
 end, { desc = "Format buffer" })
+
+
+
