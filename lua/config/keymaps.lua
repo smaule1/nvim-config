@@ -22,7 +22,7 @@ vim.api.nvim_create_user_command('BufDeleteAll', function()
     end
   end
 end, {})
-vim.keymap.set('n', '<leader>bda', ':BufDeleteAll<CR>', { desc = 'Delete all buffers', silent = true })
+vim.keymap.set('n', '<leader>bD', ':BufDeleteAll<CR>', { desc = 'Delete all buffers', silent = true })
 
 -- writting
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Write file" })
